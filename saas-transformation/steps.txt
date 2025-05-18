@@ -1,0 +1,5 @@
+1.We can implement a multi-tenant architecture, configuring each company's DNS to point to our infrastructure, then on each request extract host and ifentify tenant.
+
+2.We must intoduce `company_id` column to the users table, and update the unique constraint on email to (email, company_id) to allow two users with same email exist across different companies.
+
+3.The first step must be validating the host domain against user's `company_id` when the user logs in. Then after user authenticates, embed the `company_id` in the access token and implement a middleware, which will validate the copmany on each authenticated request.
