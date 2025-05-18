@@ -1,0 +1,13 @@
+{
+	"type": "Loop",
+	"times": 10,
+	"action": {
+		"type": "Condition",
+		"expression": "Math.random() > 0.5",
+		"trueAction": {
+			"type": "SendSMS",
+			"phoneNumber": "+123456789"
+		},
+		"falseAction": null
+	}
+}

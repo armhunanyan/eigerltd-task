@@ -1,0 +1,9 @@
+{
+	"type": "Condition",
+	"expression": "date === '01/01/2025'",
+	"trueAction": {
+		"type": "SendSMS",
+		"phoneNumber": "+123456789"
+	},
+	"falseAction": null
+}

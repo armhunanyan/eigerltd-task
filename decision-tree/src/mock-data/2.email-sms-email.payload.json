@@ -1,0 +1,14 @@
+{
+	"type": "SendEmail",
+	"sender": "a@example.com",
+	"receiver": "b@example.com",
+	"next": {
+		"type": "SendSMS",
+		"phoneNumber": "+1234567890",
+		"next": {
+			"type": "SendEmail",
+			"sender": "a@example.com",
+			"receiver": "b@example.com"
+		}
+	}
+}
