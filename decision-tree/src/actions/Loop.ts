@@ -1,6 +1,6 @@
-import { Action } from './Action';
-import { ActionType, LoopPayload } from '../types/action.types';
-import { ActionFactory } from '../factories/ActionFactory';
+import { Action } from "./Action";
+import { ActionType, LoopPayload } from "../types/action.types";
+import { ActionFactory } from "../factories/ActionFactory";
 
 export class Loop implements Action {
   constructor(public times: number, public action: Action) {}

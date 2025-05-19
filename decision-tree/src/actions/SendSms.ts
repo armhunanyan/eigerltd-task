@@ -1,5 +1,5 @@
-import { ActionType, SendSMSPayload } from '../types/action.types';
-import { Action } from './Action';
+import { ActionType, SendSMSPayload } from "../types/action.types";
+import { Action } from "./Action";
 
 export class SendSMS implements Action {
   constructor(public phoneNumber: string) {}

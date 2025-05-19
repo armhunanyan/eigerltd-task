@@ -1,5 +1,5 @@
-import { ActionType, SendEmailPayload } from '../types/action.types';
-import { Action } from './Action';
+import { ActionType, SendEmailPayload } from "../types/action.types";
+import { Action } from "./Action";
 
 export class SendEmail implements Action {
   constructor(public sender: string, public receiver: string) {}

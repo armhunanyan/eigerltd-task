@@ -10,7 +10,10 @@ export class Condition implements Action {
   ) {}
 
   async execute(context: any = {}) {
-    const func = new Function(...Object.keys(context), `return ${this.expression};`);
+    const func = new Function(
+      ...Object.keys(context),
+      `return ${this.expression};`
+    );
     const result = func(...Object.values(context));
     if (result) {
       await this.trueAction?.execute(context);
